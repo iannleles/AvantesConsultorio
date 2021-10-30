@@ -13,7 +13,7 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 
 # Tecnologias utilizadas
 
-Visual Studio 2019 Community
+<li>Visual Studio 2019 Community</li>
 <li>C#</li>
 <li>HTML</li>
 <li>JavaScript</li>
