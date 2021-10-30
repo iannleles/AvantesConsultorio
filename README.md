@@ -7,3 +7,9 @@ Aplicar os conceitos aprendidos nas disciplinas de Sistemas Distribuídos e dema
 Colocar os alunos e alunas em contato com tecnologias atuais e amplamente utilizadas no mercado de trabalho.
 Despertar o interesse para a pesquisa de soluções e resoluções de problemas emergentes (atuais).
 Desafiar a utilização de recursos além dos aprendidos durante as aulas.
+
+
+<br><br>
+
+# Técnologias utilizadas:
+
