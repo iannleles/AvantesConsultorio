@@ -11,5 +11,11 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 
 <br><br>
 
-# Técnologias utilizadas:
+# Tecnologias utilizadas
 
+Visual Studio 2019 Community
+<li>C#</li>
+<li>HTML</li>
+<li>JavaScript</li>
+<li>JQuery</li>
+<li>Ajax</li>
