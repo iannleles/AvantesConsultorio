@@ -9,7 +9,7 @@
                 type: "POST",
                 url: stringUrl,
                 async: false,
-                data { mensagem: mensagem },
+                data: { mensagem: mensagem },
 
                 success: function (data) {
                     $("#displaymensagem").append(" >> EU : " + mensagem + "\n");
