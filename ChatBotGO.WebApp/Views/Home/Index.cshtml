@@ -3,18 +3,43 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="container">
-    <div class="col-md-12">
 
-        <textarea id="displaymensagem" cols="100" rows="20"></textarea>
-
-        <br />
-        <br />
-
-        <label> Mensagem: </label> <input type="text" id="mensagem" style="width:500px" />
-        <input id="Enviar" type="button" value="Enviar" />
+<div class="container-fluid">
+    <div class="col-12 bg-dark" style="height:400px;">
 
     </div>
+
+    <div id="divchat" class="col-12 float-right">
+        <div class="col-12">
+            <h2 class="text-black-50">Chat de atendimento On-line</h2>
+        </div>
+        <div class="col-12">
+            <textarea id="displaymensagem" cols="100" rows="20"></textarea>
+        </div>
+        <div class="col-12">
+            <div class="col-12">
+                <label class="col-form-label text-black-50"> <b>Mensagem:</b> </label>
+                <input type="text" id="mensagem" style="width:500px" />
+            </div>
+            <div class="col-12">
+                <input id="Enviar" type="button" value="Enviar" />
+            </div>
+        </div>
+    </div>
 </div>
+@*<div class="container">
+        <div class="col-md-12">
+
+            <textarea id="displaymensagem" cols="100" rows="20"></textarea>
+
+            <br />
+            <br />
+
+            <label> Mensagem: </label> <input type="text" id="mensagem" style="width:500px" />
+            <input id="Enviar" type="button" value="Enviar" />
+
+        </div>
+    </div>*@
+<link href="~/css/StyleSheet.css" rel="stylesheet" />
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script src="~/js/JavaScript.js"></script>

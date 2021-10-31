@@ -1,0 +1,15 @@
+﻿#divchat
+{
+    width:160px;
+    height:45px;
+    overflow:hidden;
+    background-color:#4ac959;
+    bottom: 9%;
+    position:absolute;
+}
+
+#divchat :hover{
+    width: 600px;
+    height:300px;
+}
+
