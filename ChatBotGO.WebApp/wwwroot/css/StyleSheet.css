@@ -3,13 +3,37 @@
     width:160px;
     height:45px;
     overflow:hidden;
-    background-color:#4ac959;
+    background-color:#4AC959;
     bottom: 9%;
     position:absolute;
+    border-radius:8px;
+    left:85%;
+    transition : width 0.5s, height 0.5s, left 0.5s;
+    animation-delay: 1s;
 }
 
-#divchat :hover{
-    width: 600px;
-    height:300px;
-}
+    #divchat:hover{
+        width: 600px;
+        height:500px;
+        left: 55%;
+    }
+        
+
+    .textarea{
+        width:100%;
+        height:300px;
+        border-radius: 8px;
+
+    }
+
+    .input {
+        border-radius: 5px;
+        border:1px solid;
+        border-bottom-color: #455A64;
+        width: 79%
+
+    }
+
+    
+
 
