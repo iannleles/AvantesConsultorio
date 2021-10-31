@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBotGO.Web.Models
+namespace ChatBotGO.WebApp.Models
 {
     [Table("RespostaChat")]
     public class RespostaChat
