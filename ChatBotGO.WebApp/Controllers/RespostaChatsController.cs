@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ChatBotGO.Web.Models;
+using ChatBotGO.WebApp.Data;
+using ChatBotGO.WebApp.Models;
 
-namespace ChatBotGO.Web.Controllers
+namespace ChatBotGO.WebApp.Controllers
 {
     public class RespostaChatsController : Controller
     {
@@ -148,14 +149,12 @@ namespace ChatBotGO.Web.Controllers
         {
             return _context.RespostaChat.Any(e => e.Id == id);
         }
-
-
         [HttpPost("api/Chat")]
-        public async Task<JsonResult>Chat(RequestApi request)
+        public async Task<JsonResult> Chat(RequestApi request)
         {
             var respostaChat = await _context.RespostaChat.Where(m => m.Mensagem.ToUpper().Contains(request.mensagem.ToUpper())).FirstOrDefaultAsync();
 
-            if(respostaChat != null)
+            if (respostaChat != null)
             {
                 var resposta = new ResponseApi { resposta = respostaChat.Resposta };
 
