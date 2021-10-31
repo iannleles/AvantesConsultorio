@@ -20,10 +20,8 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 <li>JavaScript</li>
 <li>JQuery</li>
 <li>Ajax</li>
-<br><br>
 
 # Fonte de pesquisa
-<br>
 <br>
 
 Youtube / Canais <br>
