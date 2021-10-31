@@ -16,6 +16,7 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 <li>Visual Studio 2019 Community</li>
 <li>C#</li>
 <li>HTML</li>
+<li>CSS</li>
 <li>JavaScript</li>
 <li>JQuery</li>
 <li>Ajax</li>
