@@ -16,6 +16,17 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 <li>Visual Studio 2019 Community</li>
 <li>C#</li>
 <li>HTML</li>
+<li>CSS</li>
 <li>JavaScript</li>
 <li>JQuery</li>
 <li>Ajax</li>
+
+# Fonte de pesquisa
+<br>
+
+Youtube / Canais <br>
+https://www.youtube.com/user/valdirferreira20/featured
+
+Documentações / Artigos
+
+https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-5.0&tabs=visual-studio
