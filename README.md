@@ -20,6 +20,7 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 <li>JavaScript</li>
 <li>JQuery</li>
 <li>Ajax</li>
+li>Banco de dados SQL Server com EntityFramework</li>
 
 # Fonte de pesquisa
 <br>
