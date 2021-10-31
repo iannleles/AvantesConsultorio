@@ -21,8 +21,10 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 <li>JQuery</li>
 <li>Ajax</li>
 <br><br>
-#Fonte de pesquisa
+
+# Fonte de pesquisa
 <br>
 <br>
+
 Youtube / Canais <br>
 https://www.youtube.com/user/valdirferreira20/featured
