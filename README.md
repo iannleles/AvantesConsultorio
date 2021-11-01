@@ -29,5 +29,5 @@ Youtube / Canais <br>
 https://www.youtube.com/user/valdirferreira20/featured
 
 Documentações / Artigos
-
+https://bootsnipp.com/snippets/nNg98
 https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-5.0&tabs=visual-studio
