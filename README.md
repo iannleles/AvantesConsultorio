@@ -28,6 +28,6 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 Youtube / Canais <br>
 https://www.youtube.com/user/valdirferreira20/featured
 
-Documentações / Artigos
-https://bootsnipp.com/snippets/nNg98
+Documentações / Artigos <br>
+https://bootsnipp.com/snippets/nNg98 <br>
 https://docs.microsoft.com/pt-br/aspnet/core/tutorials/first-mvc-app/start-mvc?view=aspnetcore-5.0&tabs=visual-studio
