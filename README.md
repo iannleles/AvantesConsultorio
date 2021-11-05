@@ -27,6 +27,7 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 
 Youtube / Canais <br>
 https://www.youtube.com/user/valdirferreira20/featured
+https://www.youtube.com/channel/UCf9Wv3iwnyxq6w0fSDjx8wQ
 
 Documentações / Artigos <br>
 https://bootsnipp.com/snippets/nNg98 <br>
