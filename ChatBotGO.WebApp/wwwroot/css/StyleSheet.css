@@ -9,7 +9,7 @@
     left:85%;
     transition : width 0.5s, height 0.5s, left 0.5s;
     animation-delay: 1s;
-}
+}   
 
     #divchat:hover{
         width: 600px;
