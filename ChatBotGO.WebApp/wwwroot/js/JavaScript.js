@@ -1,6 +1,6 @@
 ﻿
 
-var setChat = document.getElementById("containerdiv");
+//var setChat = document.getElementById("containerdiv");
 
 
 

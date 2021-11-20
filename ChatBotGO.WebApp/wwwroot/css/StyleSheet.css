@@ -1,19 +1,18 @@
-﻿#divchat
-{
-    width:160px;
-    height:45px;
-    overflow:hidden;    
+﻿#divchat {
+    width: 160px;
+    height: 45px;
+    overflow: hidden;
     bottom: 9%;
-    position:absolute;
-    border-radius:8px;
-    left:85%;
-    transition : width 0.5s, height 0.5s, left 0.5s;
+    position: absolute;
+    border-radius: 8px;
+    left: 85%;
+    transition: width 0.5s, height 0.5s, left 0.5s;
     animation-delay: 1s;
 }   
 
-    #divchat:hover{
+    #divchat:hover {
         width: 600px;
-        height:500px;
+        height: 500px;
         left: 55%;
     }
         
