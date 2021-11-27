@@ -26,7 +26,7 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 https://drive.google.com/drive/u/0/folders/1Sroh1K5QcPUhzVPVuROCHNDewec6n5GChttps://drive.google.com/drive/u/0/folders/1Sroh1K5QcPUhzVPVuROCHNDewec6n5GC
 
 
-<br>
+
 # Fonte de pesquisa
 
 
