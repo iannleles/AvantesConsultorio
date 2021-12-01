@@ -1,13 +1,17 @@
 @charset "UTF-8";
 
 body {
-    background-color: white;
+    background: #7F7FD5;
+    background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
     color: rgba(0,0,0,1);
 }
 p {
     text-align: justify;
-    text-indent: 50px;
-    color: gray;
+    text-indent: 100px;
+    color: white;
+    font-family:Century;
+    font-size:20px;
 
 }
 h1#ola {
@@ -15,6 +19,13 @@ h1#ola {
     border-bottom: 1px rgba(0,0,0,0.5) solid;
     margin-top: auto;
     margin-bottom: auto;
+    margin:50px;
+    padding-block-end:50px;
+}
+
+h1{
+    text-align:initial;  
+    
 }
 
 figure.logo {
@@ -53,13 +64,16 @@ nav#menu ul {
     left: 300px;
 }
 
-nav#menu li {
-    display: inline-block;
-    background-color: white;
-    padding: 30px 110px 30px 110px;
-    margin: -15px 0px 0px 0px;
-    transition: background-color 1s;
-}
+    nav#menu li {
+        display: inline-block;
+        background: #7F7FD5;
+       /* background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);*/
+        padding: 30px 110px 30px 110px;
+        margin: -15px 0px 0px 0px;
+        transition: background-color 1s;
+        font: bold
+    }
 
 nav#menu li:hover{
     background-color: whitesmoke;
@@ -74,3 +88,4 @@ nav#menu a{
 nav#menu a:hover{
     font-weight: 700;
 }
+
