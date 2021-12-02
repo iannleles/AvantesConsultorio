@@ -3,7 +3,7 @@
     height: 45px;
     overflow: hidden;
     bottom: 9%;
-    position: absolute;
+    position: sticky;
     border-radius: 8px;
     left: 85%;
     transition: width 0.5s, height 0.5s, left 0.5s;
