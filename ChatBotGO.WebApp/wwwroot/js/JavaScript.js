@@ -10,8 +10,7 @@ $(function () {
         function () {
             var mensagem = $("#mensagem").val();
 
-            var stringUrl = "api/Chat"         
-            
+            var stringUrl = "api/Chat"
 
             $.ajax({
                 type: "POST",
