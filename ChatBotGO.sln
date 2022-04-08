@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ChatBotGO.WebApp", "ChatBot
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TelegramTesteBot", "TelegramTesteBot\TelegramTesteBot.csproj", "{A06F262E-9E4B-4C56-811B-E2D6230D350F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatBot-Web", "ChatBot-Web\ChatBot-Web.csproj", "{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{A06F262E-9E4B-4C56-811B-E2D6230D350F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A06F262E-9E4B-4C56-811B-E2D6230D350F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A06F262E-9E4B-4C56-811B-E2D6230D350F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
