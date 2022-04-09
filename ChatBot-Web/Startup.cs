@@ -32,9 +32,11 @@ namespace ChatBot_Web
                     Configuration.GetConnectionString("DefaultConnection")));
             services.AddDatabaseDeveloperPageExceptionFilter();
 
-            services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true)
+            services.AddIdentity<IdentityUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
             services.AddControllersWithViews();
+
+            services.AddRazorPages();
 
             services.Configure<IdentityOptions>(options =>
             {
@@ -59,7 +61,7 @@ namespace ChatBot_Web
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.        
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, IServiceProvider serviceProvider)
         {
             if (env.IsDevelopment())
             {
@@ -74,6 +76,10 @@ namespace ChatBot_Web
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            CreateRoles(serviceProvider).Wait();
+
+
             app.UseHttpsRedirection();
             app.UseStaticFiles();
 
@@ -91,6 +97,47 @@ namespace ChatBot_Web
             });
 
            
-        }        
+        }
+
+        private async Task CreateRoles(IServiceProvider serviceProvider)
+        {
+            //initializing custom roles 
+            var RoleManager = serviceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+            var UserManager = serviceProvider.GetRequiredService<UserManager<IdentityUser>>();
+            string[] roleNames = { "Médico", "Recepcionista", "Gerente Administrativo", "Auxiliar", "Suporte Técnico" };
+            IdentityResult roleResult;
+
+            foreach (var roleName in roleNames)
+            {
+                var roleExist = await RoleManager.RoleExistsAsync(roleName);
+                if (!roleExist)
+                {
+                    //create the roles and seed them to the database: Question 1
+                    roleResult = await RoleManager.CreateAsync(new IdentityRole(roleName));
+                }
+            }
+
+            //Here you could create a super user who will maintain the web app
+            var poweruser = new IdentityUser
+            {
+
+                UserName = "adminchatbot",
+                Email = "admin@chatbot.com",
+            };
+            //Ensure you have these values in your appsettings.json file
+            string userPWD = poweruser.UserName;
+            var _user = await UserManager.FindByEmailAsync(poweruser.Email);
+
+            if (_user == null)
+            {
+                var createPowerUser = await UserManager.CreateAsync(poweruser, userPWD);
+                if (createPowerUser.Succeeded)
+                {
+                    //here we tie the new user to the role
+                    await UserManager.AddToRoleAsync(poweruser, "Admin");
+
+                }
+            }
+        }
     }
 }
