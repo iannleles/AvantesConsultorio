@@ -7,6 +7,8 @@ namespace ChatBot_Web.Models
 {
     public class Endereco
     {
+        public int Id { get; set; }
+
         public string Cep { get; set; }
 
         public string Logradouro { get; set; }
@@ -17,7 +19,7 @@ namespace ChatBot_Web.Models
 
         public string Bairro { get; set; }
 
-        public string UFSigla { get; set; }
+        public UF UFSigla { get; set; }
 
         public string Cidade { get; set; }
 

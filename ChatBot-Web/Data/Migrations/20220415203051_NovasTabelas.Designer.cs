@@ -4,14 +4,16 @@ using ChatBot_Web.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace ChatBot_Web.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20220415203051_NovasTabelas")]
+    partial class NovasTabelas
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -49,7 +51,7 @@ namespace ChatBot_Web.Data.Migrations
 
                     b.HasIndex("PacienteId");
 
-                    b.ToTable("Agendamento");
+                    b.ToTable("Agendamentos");
                 });
 
             modelBuilder.Entity("ChatBot_Web.Models.Endereco", b =>
@@ -84,7 +86,7 @@ namespace ChatBot_Web.Data.Migrations
 
                     b.HasIndex("UFSiglaUFId");
 
-                    b.ToTable("Endereco");
+                    b.ToTable("Enderecos");
                 });
 
             modelBuilder.Entity("ChatBot_Web.Models.Especialidade", b =>
@@ -132,7 +134,7 @@ namespace ChatBot_Web.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Paciente");
+                    b.ToTable("Pacientes");
                 });
 
             modelBuilder.Entity("ChatBot_Web.Models.UF", b =>
@@ -153,7 +155,7 @@ namespace ChatBot_Web.Data.Migrations
 
                     b.HasKey("UFId");
 
-                    b.ToTable("UF");
+                    b.ToTable("UFs");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
