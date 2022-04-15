@@ -12,7 +12,6 @@ namespace ChatBot_Web.Models
         public string Sigla { get; set; }
 
         public string Nome { get; set; }
-
-        public string NomeSemAcento { get; set; }
+        
     }
 }
