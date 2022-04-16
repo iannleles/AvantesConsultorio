@@ -30,14 +30,7 @@ namespace ChatBot_Web.Controllers
         public IActionResult Index()
         {
             return View();
-        }
-
-        [HttpGet]
-        public IActionResult Perfil()
-        {
-
-            return View();
-        }        
+        }              
 
 
         public IActionResult Agendamento()

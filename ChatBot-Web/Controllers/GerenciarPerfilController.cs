@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
@@ -8,6 +9,7 @@ using System.Threading.Tasks;
 
 namespace ChatBot_Web.Controllers
 {
+    [Authorize(Roles = "SuperAdmin")]
     public class GerenciarPerfilController : Controller
     {
         private readonly RoleManager<IdentityRole> _roleManager;
