@@ -1,0 +1,53 @@
+﻿@using ChatBot_Web.Models
+@model List<ChatBot_Web.Models.ViewModel.UsuarioPerfilViewModel>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="card shadow mb-4">
+    <div class="card-header py-3">
+        <div class="card-header py-3">            
+            <h1 class="m-0 text-primary">Perfis de usuário</h1>
+        </div>
+        <div class="card-body">
+            <table id="myTable" class="table table-bordered dataTable" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>Nome Usuário</th>
+                        <th>Email</th>
+                        <th>Perfis</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var user in Model)
+                    {
+                        <tr>
+                            <td>@user.NomeUsuario</td>
+                            <td>@user.Email</td>
+                            <td>@string.Join(" , ", user.Perfis.ToList())</td>
+                            <td>
+                                <a class="btn btn-primary" asp-controller="UsuarioPerfil" asp-action="Gerenciar" asp-route-userId="@user.UsuarioId">Mudar Perfil</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+                }
+
+            });
+
+        });
+    </script>
+
+}

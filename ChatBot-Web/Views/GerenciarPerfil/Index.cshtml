@@ -1,0 +1,56 @@
+﻿@model List<Microsoft.AspNetCore.Identity.IdentityRole>
+@{
+    ViewData["Title"] = "Role Manager";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+    <h5 class="card-header">Adicionar Perfis</h5>
+    <div class="card-body">
+        <div class="row">
+            <label for="exampleInputEmail1">Perfil</label>
+            <div class="col col-sm-6">
+                <input name="roleName" class="form-control">
+            </div>
+            <div class="col col-sm-2">
+                <button class="btn btn-primary">Adicionar Perfil</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="card mt-4">
+    <div class="card-body">
+        <table id="myTable" class="table table-bordered dataTable">
+            <thead>
+                <tr>
+                    <th>Perfil</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var role in Model)
+                {
+                    <tr>
+                        <td>@role.Name</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('#myTable').DataTable({
+                "language": {
+                    "url": "//cdn.datatables.net/plug-ins/9dcbecd42ad/i18n/Portuguese-Brasil.json"
+                }
+
+            });
+
+        });
+    </script>
+
+}

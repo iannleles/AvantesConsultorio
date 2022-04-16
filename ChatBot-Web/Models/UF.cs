@@ -5,10 +5,13 @@ using System.Threading.Tasks;
 
 namespace ChatBot_Web.Models
 {
-    public class Especialidade
+    public class UF
     {
-        public int Id { get; set; }
+        public int UFId { get; set; }
+
+        public string Sigla { get; set; }
 
         public string Nome { get; set; }
+        
     }
 }
