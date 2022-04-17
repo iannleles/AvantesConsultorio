@@ -1,134 +1,121 @@
-﻿<div class="card">
-    <h5 class="card-header">Dados da Consulta</h5>
-    <div class="card-body">
-        <div class="row">
-            <div class="col col-sm-6">
-                <label for="exampleInputEmail1">Especialidade</label>
-                <select class="form-control" id="selecaoPerfilId">
-                    <option>Clínico Geral</option>
-                    <option>Dentista</option>
-                    <option>Nutricionista</option>
-                    <option>Cardiologista</option>
-                    <option>Pediatria</option>
-                </select>
-            </div>
-            <div class="form-group col-sm-3">
-                <label for="exampleInputPassword1">Data</label>
-                <input type="date" class="form-control" id="" placeholder="">
-            </div>
-            <div class="form-group col-sm-3">
-                <label for="exampleInputPassword1">Horário</label>
-                <input type="datetime" class="form-control" id="" placeholder="">
+﻿@model ChatBot_Web.Models.ViewModel.AgendamentoViewModel
+@using ChatBot_Web.Models
+
+
+<form asp-action="Agendamento">
+    <div class="card">
+        <h5 class="card-header">Dados da Consulta</h5>
+        <div class="card-body">
+            <div class="row">
+                <div class="col col-sm-6">
+                    <label>Especialidade</label>
+                    <select asp-for="EspecialidadeId" class="form-control" asp-items="ViewBag.EspecialidadeId">
+                        <option disabled selected>--- SELECIONE ---</option>
+                    </select>                                         
+                </div>
+                <div class="form-group col-sm-3">
+                    <label for="exampleInputPassword1">Data / Horário</label>
+                    <input asp-for="Data" class="form-control" type="datetime-local">
+                    <span asp-validation-for="Data" class="text-danger"></span>
+                </div>                
             </div>
         </div>
     </div>
-</div>
-<div class="card mt-4">
-    <h5 class="card-header">Dados Pessoais</h5>
-    <div class="card-body">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="card">
+    <div class="card mt-4">
+        <h5 class="card-header">Dados Pessoais</h5>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-sm-12">
                     <div class="card">
-                        <div class="card-body">
-                            <h5 class="card-title">Paciente</h5>
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Paciente</h5>
                                 <div class="row">
                                     <div class="form-group col-sm-6">
                                         <label for="exampleInputEmail1">Nome</label>
-                                        <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="Nome">
+                                        <input asp-for="Paciente.Nome" class="form-control" id="" aria-describedby="emailHelp" placeholder="Nome">
                                     </div>
                                     <div class="form-group col-sm-6">
                                         <label for="exampleInputEmail1">Sobrenome</label>
-                                        <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="Sobrenome">
+                                        <input asp-for="Paciente.Sobrenome" class="form-control" id="" aria-describedby="emailHelp" placeholder="Sobrenome">
                                     </div>
                                 </div>
-                                 <div class="row">
+                                <div class="row">
                                     <div class="form-group col-sm-4">
                                         <label for="exampleInputEmail1">RG</label>
-                                        <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="RG">
+                                        <input asp-for="Paciente.RG" class="form-control" id="" aria-describedby="emailHelp" placeholder="RG">
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="exampleInputEmail1">CPF</label>
-                                        <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="CPF">
+                                        <input asp-for="Paciente.CPF" class="form-control" id="" aria-describedby="emailHelp" placeholder="CPF">
                                     </div>
                                     <div class="form-group col-sm-4">
                                         <label for="exampleInputEmail1">Data Nascimento</label>
-                                        <input type="Date" class="form-control" id="" aria-describedby="emailHelp" placeholder="Data Nascimento">
-                                    </div>                                
+                                        <input asp-for="Paciente.DataNascimento" type="date" class="form-control" id="" aria-describedby="emailHelp" placeholder="Data Nascimento">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="card mt-4">
                         <div class="card-body">
                             <h5 class="card-title">Contato</h5>
                             <div class="row">
-                                <div class="form-group col-sm-2">
-                                    <label for="exampleInputEmail1">DDD</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="DDD">
-                                </div>
                                 <div class="form-group col-sm-4">
                                     <label for="exampleInputEmail1">Telefone</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="55+ 11 4444-8888">
-                                </div>
-                                <div class="form-group col-sm-2">
-                                    <label for="exampleInputEmail1">DDD</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="DDD">
+                                    <input asp-for="Paciente.Telefone" class="form-control" id="" aria-describedby="emailHelp" placeholder="55+ 11 4444-8888">
                                 </div>
                                 <div class="form-group col-sm-4">
                                     <label for="exampleInputEmail1">Celular</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="55+ 73 99999-9999">
+                                    <input asp-for="Paciente.Celular" class="form-control" id="" aria-describedby="emailHelp" placeholder="55+ 73 99999-9999">
                                 </div>
                             </div>
                         </div>
-                    </div>                    
+                    </div>
                     <div class="card mt-4">
                         <div class="card-body">
                             <h5 class="card-title">Endereço</h5>
                             <div class="row">
                                 <div class="form-group col-sm-2">
                                     <label for="exampleInputEmail1">CEP</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                                    <input asp-for="Endereco.Cep" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group col-sm-10">
                                     <label for="exampleInputPassword1">Logradouro</label>
-                                    <input type="" class="form-control" id="" placeholder="">
+                                    <input asp-for="Endereco.Logradouro" class="form-control" id="" placeholder="">
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-group col-sm-2">
                                     <label for="exampleInputEmail1">Numero</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                                    <input asp-for="Endereco.Numero" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
                                 </div>
                                 <div class="form-group col-sm-10">
                                     <label for="exampleInputEmail1">Complemento</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                                    <input asp-for="Endereco.Complemento" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
                                 </div>
                             </div>
 
                             <label for="exampleInputEmail1">Bairro</label>
-                            <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                            <input asp-for="Endereco.Bairro" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
 
                             <div class="row">
                                 <div class="form-group col-sm-8">
                                     <label for="exampleInputEmail1">Cidade</label>
-                                    <input type="" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
+                                    <input asp-for="Endereco.Cidade" class="form-control" id="" aria-describedby="emailHelp" placeholder="">
                                 </div>
-                                <div class="form-group col-sm-4">
+                                <div class="form-group col-sm-2">
                                     <label for="exampleInputEmail1">UF</label>
-                                    <select class="form-control" id="selecaoPerfilId">
-                                        <option>SP</option>
-                                        <option>MG</option>
-                                        <option>BA</option>
-                                        <option>RJ</option>
-                                        <option>DF</option>
+                                    <select class="form-control" asp-for="Endereco.UFSigla.UFId" asp-items="ViewBag.UFSigla">
+                                        <option disabled selected>-SELECIONE-</option>
                                     </select>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>                              
+                </div>
             </div>
-         <button type="submit" class="btn btn-success mb-2 mt-4">Vincular e Criar</button>
+            <button type="submit" class="btn btn-success mb-2 mt-4">Vincular e Criar</button>
+        </div>
     </div>
-</div>
+</form>
