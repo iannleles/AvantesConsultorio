@@ -19,6 +19,8 @@ namespace ChatBot_Web.Models
 
         public string Bairro { get; set; }
 
+        public int UFSiglaId { get; set; }
+
         public UF UFSigla { get; set; }
 
         public string Cidade { get; set; }

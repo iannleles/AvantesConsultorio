@@ -9,6 +9,8 @@ namespace ChatBot_Web.Models
     {
         public int Id { get; set; }
 
+        public int EspecialidadeId { get; set; }
+
         public Especialidade Especialidade { get; set; }
 
         public DateTime? Data { get; set; }

@@ -38,7 +38,7 @@ namespace ChatBot_Web.Controllers
         {                       
 
             ViewData["EspecialidadeId"] = new SelectList(_context.Especialidade, "Id", "Nome");           
-            ViewData["UFSigla"] = new SelectList(_context.UF, "UFId", "Nome");           
+            ViewData["UFSiglaId"] = new SelectList(_context.UF, "UFId", "Nome");           
 
             return View();
         }
@@ -53,7 +53,7 @@ namespace ChatBot_Web.Controllers
             {
                 //var especialidade = _context.Especialidade;
                 //ViewData["Id"] = new SelectList(especialidade, "Id", "Nome", agendamentoViewModel.EspecialidadeId);
-                agendamento.Especialidade = agendamentoViewModel.Especialidade;
+                agendamento.EspecialidadeId = agendamentoViewModel.EspecialidadeId;
                 agendamento.Data = agendamentoViewModel.Data;
                 agendamento.Horario = agendamentoViewModel.Horario;
                 agendamento.Paciente = new Paciente()
@@ -74,7 +74,7 @@ namespace ChatBot_Web.Controllers
                     Complemento = agendamentoViewModel.Endereco.Complemento,
                     Bairro = agendamentoViewModel.Endereco.Bairro,
                     Cidade = agendamentoViewModel.Endereco.Cidade,
-                    UFSigla = agendamentoViewModel.Endereco.UFSigla,
+                    UFSiglaId = agendamentoViewModel.Endereco.UFSiglaId,
                 };            
             }
 
