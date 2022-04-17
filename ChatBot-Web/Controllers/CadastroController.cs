@@ -50,9 +50,7 @@ namespace ChatBot_Web.Controllers
             Agendamento agendamento = new Agendamento();
 
             if (ModelState.IsValid)
-            {
-                //var especialidade = _context.Especialidade;
-                //ViewData["Id"] = new SelectList(especialidade, "Id", "Nome", agendamentoViewModel.EspecialidadeId);
+            {              
                 agendamento.EspecialidadeId = agendamentoViewModel.EspecialidadeId;
                 agendamento.Data = agendamentoViewModel.Data;
                 agendamento.Horario = agendamentoViewModel.Horario;
