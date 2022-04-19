@@ -4,6 +4,7 @@ using ChatBot_Web.Models.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
@@ -80,6 +81,15 @@ namespace ChatBot_Web.Controllers
             _context.SaveChanges();
 
             return View(agendamentoViewModel);
+        }
+
+        // GET: Agendamentos
+        public async Task<IActionResult> Listar()
+        {
+            var appDbContext = await _context.Agendamento.Include(a => a.Paciente).Include(a => a.Especialidade).Include(a => a.Endereco).ToListAsync();
+
+
+            return View(appDbContext.OrderBy(x => x.Data).ToList());
         }
 
 
