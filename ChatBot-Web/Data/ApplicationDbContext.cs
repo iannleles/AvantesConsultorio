@@ -18,7 +18,8 @@ namespace ChatBot_Web.Data
         public DbSet<Paciente> Paciente { get; set; }
         public DbSet<UF> UF { get; set; }
         public DbSet<Endereco> Endereco { get; set; }
-        public DbSet<Especialidade> Especialidade { get; set; }        
+        public DbSet<Especialidade> Especialidade { get; set; }
+        public DbSet<RespostaChat> RespostaChat { get; set; }
 
     }
 }

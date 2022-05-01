@@ -3,9 +3,10 @@
 @{
     ViewData["Title"] = "Index";
 }
+
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <div class="card-header py-3">            
+        <div class="card-header py-3">
             <h1 class="m-0 bold text-primary">Agendamentos</h1>
         </div>
         <div class="card-body">
@@ -25,7 +26,7 @@
                             RG
                         </th>
                         <th>
-                           Celular
+                            Celular
                         </th>
                         <th>
                             Data / Horário
@@ -36,31 +37,31 @@
                 <tbody>
                     @foreach (var item in Model)
                     {
-                    <tr>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Paciente.Nome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Paciente.Sobrenome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Especialidade.Nome)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Paciente.RG)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Paciente.Celular)
-                        </td>
-                        <td>
-                            @Html.DisplayFor(modelItem => item.Data)
-                        </td>
-                        <td>
-                            <a href="#" class="btn btn btn-warning text-white small btnEdit" data-toggle="modal" data-target="#editarReceitaModal" data-value="@item.Id"><i class="fa fa-edit"></i></a>
-                            <a href="#" class="btn btn btn-info text-white small btnDetails" data-toggle="modal" data-target="#detalhesReceitaModal" data-value="@item.Id"><i class="fa fa-eye"></i></a>
-                            <a href="#" class="btn btn btn-danger text-white small btnDelete" data-toggle="modal" data-target="#deletarReceitaModal" data-value="@item.Id"><i class="fa fa-trash"></i></a>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Paciente.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Paciente.Sobrenome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Especialidade.Nome)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Paciente.RG)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Paciente.Celular)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Data)
+                            </td>
+                            <td>
+                                <a href="#" class="btn btn btn-warning text-white small btnEdit" data-toggle="modal" data-target="#editarReceitaModal" data-value="@item.Id"><i class="fa fa-edit"></i></a>
+                                <a href="#" class="btn btn btn-info text-white small btnDetails" data-toggle="modal" data-target="#detalhesReceitaModal" data-value="@item.Id"><i class="fa fa-eye"></i></a>
+                                <a href="#" class="btn btn btn-danger text-white small btnDelete" data-toggle="modal" data-target="#deletarReceitaModal" data-value="@item.Id"><i class="fa fa-trash"></i></a>
+                            </td>
+                        </tr>
                     }
                 </tbody>
             </table>

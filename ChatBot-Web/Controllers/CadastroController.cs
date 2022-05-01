@@ -80,7 +80,7 @@ namespace ChatBot_Web.Controllers
             _context.Agendamento.AddAsync(agendamento);
             _context.SaveChanges();
 
-            return View(agendamentoViewModel);
+            return RedirectToAction(nameof(Listar));
         }
 
         // GET: Agendamentos

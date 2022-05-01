@@ -11,13 +11,13 @@
                     <label>Especialidade</label>
                     <select asp-for="EspecialidadeId" class="form-control" asp-items="ViewBag.EspecialidadeId">
                         <option disabled selected>--- SELECIONE ---</option>
-                    </select>                                         
+                    </select>
                 </div>
                 <div class="form-group col-sm-3">
                     <label for="exampleInputPassword1">Data / Horário</label>
                     <input asp-for="Data" class="form-control" type="datetime-local">
                     <span asp-validation-for="Data" class="text-danger"></span>
-                </div>                
+                </div>
             </div>
         </div>
     </div>

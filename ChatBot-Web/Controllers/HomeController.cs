@@ -23,7 +23,7 @@ namespace ChatBot_Web.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult FaleConosco()
         {
             return View();
         }

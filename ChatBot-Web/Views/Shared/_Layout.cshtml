@@ -1,52 +1,72 @@
-﻿@using Microsoft.AspNetCore.Authorization
-@inject IAuthorizationService AuthorizationService
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - ChatBot_Web</title>
+    <title>@ViewData["Title"] - Avartes Consultorio</title>
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    @*<link href="~/css/site.css" rel="stylesheet" />*@
+    @*<link rel="stylesheet" href="~/css/estilo.css" />*@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.3/css/dataTables.bootstrap5.min.css" />
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3" style="background-color: #e3f2fd;">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">ChatBot_Web</a>
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
+                    <figure class=logo style="width:70px; height:70px; margin-top:-28%; margin-left:-130%">
+                        <img src="~/img/logo.png" />
+                    </figure>
+                </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+                        @if (!User.IsInRole("SuperAdmin"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="Index">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Home" asp-action="FaleConosco">Fale Conosco</a>
+                            </li>
+                        }                        
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-controller="Cadastro" asp-action="Agendamento">Agendamento</a>
                         </li>
                         @if (User.Identity.IsAuthenticated && User.IsInRole("SuperAdmin"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="GerenciarPerfil" asp-action="Index">Gerenciar Perfil</a>
+                                <a class="nav-link" asp-area="" asp-controller="GerenciarPerfil" asp-action="Index">Gerenciar Perfil</a>
                             </li>
                         }
                         @if (User.Identity.IsAuthenticated && User.IsInRole("Gerente Administrativo"))
                         {
                             <li class="nav-item">
-                                <a class="nav-link text-dark" asp-area="" asp-controller="UsuarioPerfil" asp-action="Index">Vincular Perfil</a>
+                                <a class="nav-link" asp-area="" asp-controller="UsuarioPerfil" asp-action="Index">Vincular Perfil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="RespostaChats" asp-action="Index">Respostas Chat</a>
                             </li>
                         }
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Cadastro" asp-action="Agendamento">Agendamento</a>
-                        </li>
+                        @if (User.Identity.IsAuthenticated && User.IsInRole("Médico"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Cadastro" asp-action="Listar">Lista de Agendamento</a>
+                            </li>
+                        }
+                        
+
+
                     </ul>
                     <partial name="_LoginPartial" />
+                    </div>
                 </div>
-            </div>
-        </nav>
-    </header>
+            </nav>
+        </header> 
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
