@@ -3,37 +3,47 @@
 
 <h1>@ViewData["Title"]</h1>
 
-<form asp-route-returnUrl="@Model.ReturnUrl" method="post">
-    <div class="card">
-        <h5 class="card-header">Criar novo Usuário</h5>
-        <div class="card-body">
-            <div asp-validation-summary="All" class="text-danger"></div>
-            <div class="row">
-                <div class="col col-sm-12">
-                    <label asp-for="Input.Email"></label>
-                    <input asp-for="Input.Email" class="form-control" />
-                    <span asp-validation-for="Input.Email" class="text-danger"></span>
+<style>
+    body, html {
+        height: 100%;
+        margin: 0;
+        background: #7F7FD5;
+        background: -webkit-linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+        background: linear-gradient(to right, #91EAE4, #86A8E7, #7F7FD5);
+    }
+</style>
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <section>
+            <form asp-route-returnUrl="@Model.ReturnUrl" method="post">
+                <div class="card">
+                    <h5 class="card-header">Criar novo Usuário</h5>
+                    <div class="card-body">
+                        <div asp-validation-summary="All" class="text-danger"></div>
+                        <div class="col">
+                            <label asp-for="Input.Email"></label>
+                            <input asp-for="Input.Email" class="form-control" />
+                            <span asp-validation-for="Input.Email" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label asp-for="Input.Password"></label>
+                            <input asp-for="Input.Password" class="form-control" />
+                            <span asp-validation-for="Input.Password" class="text-danger"></span>
+                        </div>
+                        <div class="col">
+                            <label asp-for="Input.ConfirmPassword"></label>
+                            <input asp-for="Input.ConfirmPassword" class="form-control" />
+                            <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                        </div>
+                        <button class="btn btn-success mt-3" type="submit">Cadastrar</button>
+                    </div>
                 </div>
-            </div>
-            <br />
-            <div class="row">
-                <div class="col col-sm-6">
-                    <label asp-for="Input.Password"></label>
-                    <input asp-for="Input.Password" class="form-control" />
-                    <span asp-validation-for="Input.Password" class="text-danger"></span>
-                </div>
-                <div class="col col-sm-6">
-                    <label asp-for="Input.ConfirmPassword"></label>
-                    <input asp-for="Input.ConfirmPassword" class="form-control" />
-                    <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
-                </div>
-            </div>
-            <button class="btn btn-success mt-3" type="submit">Cadastrar</button>
-        </div>
+            </form>
+        </section>
     </div>
-    <br />    
-</form>    
-    @*<div class="col-md-6 col-md-offset-2">
+</div>
+
+@*<div class="col-md-6 col-md-offset-2">
         <section>
             <h4>Use another service to register.</h4>
             <hr />
