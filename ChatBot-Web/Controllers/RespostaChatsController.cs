@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using ChatBot_Web.Data;
 using ChatBot_Web.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -45,6 +46,7 @@ namespace ChatBot_Web.Controllers
         }
 
         // GET: RespostaChats/Create
+        [Authorize(Roles = "SuperAdmin, Gerente Administrativo")]
         public IActionResult Create()
         {
             return View();
@@ -55,6 +57,7 @@ namespace ChatBot_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin, Gerente Administrativo")]
         public async Task<IActionResult> Create([Bind("Id,Resposta,Mensagem")] RespostaChat respostaChat)
         {
             if (ModelState.IsValid)
@@ -67,6 +70,7 @@ namespace ChatBot_Web.Controllers
         }
 
         // GET: RespostaChats/Edit/5
+        [Authorize(Roles = "SuperAdmin, Gerente Administrativo")]
         public async Task<IActionResult> Edit(int? id)
         {
             if (id == null)
@@ -87,6 +91,7 @@ namespace ChatBot_Web.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin, Gerente Administrativo")]
         public async Task<IActionResult> Edit(int id, [Bind("Id,Resposta,Mensagem")] RespostaChat respostaChat)
         {
             if (id != respostaChat.Id)
@@ -118,6 +123,7 @@ namespace ChatBot_Web.Controllers
         }
 
         // GET: RespostaChats/Delete/5
+        [Authorize(Roles = "SuperAdmin, Gerente Administrativo")]
         public async Task<IActionResult> Delete(int? id)
         {
             if (id == null)
@@ -138,6 +144,7 @@ namespace ChatBot_Web.Controllers
         // POST: RespostaChats/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
+        [Authorize(Roles = "SuperAdmin, Gerente Administrativo")]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
             var respostaChat = await _context.RespostaChat.FindAsync(id);

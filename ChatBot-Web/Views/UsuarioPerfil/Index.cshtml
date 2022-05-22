@@ -27,7 +27,7 @@
                             <td>@user.Email</td>
                             <td>@string.Join(" , ", user.Perfis.ToList())</td>
                             <td>
-                                <a class="btn btn-primary" asp-controller="UsuarioPerfil" asp-action="Gerenciar" asp-route-userId="@user.UsuarioId">Mudar Perfil</a>
+                                <a class="btn btn-primary" asp-controller="UsuarioPerfil" asp-action="Gerenciar" asp-route-userId="@user.UsuarioId">Mudar Perfil</a>                                
                             </td>
                         </tr>
                     }
