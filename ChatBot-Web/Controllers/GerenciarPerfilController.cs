@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBot_Web.Controllers
+namespace GCMAvantes.Controllers
 {
     [Authorize(Roles = "SuperAdmin")]
     public class GerenciarPerfilController : Controller

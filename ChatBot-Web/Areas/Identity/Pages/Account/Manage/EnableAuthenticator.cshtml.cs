@@ -11,7 +11,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 
-namespace ChatBot_Web.Areas.Identity.Pages.Account.Manage
+namespace GCMAvantes.Areas.Identity.Pages.Account.Manage
 {
     public class EnableAuthenticatorModel : PageModel
     {
@@ -148,7 +148,7 @@ namespace ChatBot_Web.Areas.Identity.Pages.Account.Manage
         {
             return string.Format(
                 AuthenticatorUriFormat,
-                _urlEncoder.Encode("ChatBot_Web"),
+                _urlEncoder.Encode("GCMAvantes"),
                 _urlEncoder.Encode(email),
                 unformattedKey);
         }

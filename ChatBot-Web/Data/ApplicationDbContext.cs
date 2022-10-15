@@ -1,11 +1,11 @@
-﻿using ChatBot_Web.Models;
+﻿using GCMAvantes.Models;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace ChatBot_Web.Data
+namespace GCMAvantes.Data
 {
     public class ApplicationDbContext : IdentityDbContext
     {

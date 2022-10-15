@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBot_Web.Models.ViewModel
+namespace GCMAvantes.Models.ViewModel
 {
     public class CadastroUsuarioViewModel
     {

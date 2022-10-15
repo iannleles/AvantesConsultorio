@@ -2,15 +2,15 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ChatBot_Web.Data;
-using ChatBot_Web.Models;
+using GCMAvantes.Data;
+using GCMAvantes.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 
 
-namespace ChatBot_Web.Controllers
+namespace GCMAvantes.Controllers
 {
     public class RespostaChatsController : Controller
     {

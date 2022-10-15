@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Migrations;
 using System;
 
-namespace ChatBot_Web.Data.Migrations
+namespace GCMAvantes.Data.Migrations
 {
     public partial class CreateIdentitySchema : Migration
     {

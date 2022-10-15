@@ -1,4 +1,4 @@
-﻿using ChatBotGO.WebApp.Models;
+﻿using GCMAvantes.WebApp.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBotGO.WebApp.Controllers
+namespace GCMAvantes.WebApp.Controllers
 {
     public class HomeController : Controller
     {

@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ChatBotGO.WebApp.Migrations
+namespace GCMAvantes.WebApp.Migrations
 {
     public partial class initial : Migration
     {

@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ChatBot_Web": {
+    "GCMAvantes": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

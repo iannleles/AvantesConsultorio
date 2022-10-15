@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32901.215
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GCMAvantes.Web", "ChatBot-Web\GCMAvantes.Web.csproj", "{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Interface Web", "1.Interface Web", "{8C7179A5-9CC9-45E8-A512-81965D7BE9FB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F3BDBA7F-ADCC-4126-BA8C-6193452CFAEF} = {8C7179A5-9CC9-45E8-A512-81965D7BE9FB}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0E52E029-F797-4AE5-ABC1-4C36B7DEA415}
+	EndGlobalSection
+EndGlobal

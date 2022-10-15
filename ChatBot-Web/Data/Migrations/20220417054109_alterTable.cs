@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ChatBot_Web.Data.Migrations
+namespace GCMAvantes.Data.Migrations
 {
     public partial class alterTable : Migration
     {

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBotGO.WebApp.Models
+namespace GCMAvantes.WebApp.Models
 {
     public class RequestApi
     {

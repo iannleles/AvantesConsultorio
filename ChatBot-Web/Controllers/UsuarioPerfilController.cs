@@ -1,5 +1,5 @@
-﻿using ChatBot_Web.Data;
-using ChatBot_Web.Models.ViewModel;
+﻿using GCMAvantes.Data;
+using GCMAvantes.Models.ViewModel;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBot_Web.Controllers
+namespace GCMAvantes.Controllers
 {
     public class UsuarioPerfilController : Controller
     {

@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "ChatBotGO.WebApp": {
+    "GCMAvantes.WebApp": {
       "commandName": "Project",
       "dotnetRunMessages": "true",
       "launchBrowser": true,

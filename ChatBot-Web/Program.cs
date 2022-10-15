@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBot_Web
+namespace GCMAvantes
 {
     public class Program
     {

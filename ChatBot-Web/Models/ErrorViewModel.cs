@@ -1,6 +1,6 @@
 using System;
 
-namespace ChatBot_Web.Models
+namespace GCMAvantes.Models
 {
     public class ErrorViewModel
     {

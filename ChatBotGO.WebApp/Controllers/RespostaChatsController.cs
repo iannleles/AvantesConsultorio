@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
-using ChatBotGO.WebApp.Data;
-using ChatBotGO.WebApp.Models;
+using GCMAvantes.WebApp.Data;
+using GCMAvantes.WebApp.Models;
 
-namespace ChatBotGO.WebApp.Controllers
+namespace GCMAvantes.WebApp.Controllers
 {
     public class RespostaChatsController : Controller
     {

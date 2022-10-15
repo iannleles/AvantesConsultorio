@@ -1,5 +1,5 @@
 ﻿using System;
-using ChatBot_Web.Data;
+using GCMAvantes.Data;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI;
@@ -7,8 +7,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-[assembly: HostingStartup(typeof(ChatBot_Web.Areas.Identity.IdentityHostingStartup))]
-namespace ChatBot_Web.Areas.Identity
+[assembly: HostingStartup(typeof(GCMAvantes.Areas.Identity.IdentityHostingStartup))]
+namespace GCMAvantes.Areas.Identity
 {
     public class IdentityHostingStartup : IHostingStartup
     {

@@ -1,11 +1,11 @@
-﻿using ChatBotGO.WebApp.Models;
+﻿using GCMAvantes.WebApp.Models;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ChatBotGO.WebApp.Data
+namespace GCMAvantes.WebApp.Data
 {
     public class Contexto : DbContext
     {
@@ -14,7 +14,7 @@ namespace ChatBotGO.WebApp.Data
             Database.EnsureCreated();
         }
 
-        public DbSet<RespostaChat> RespostaChat { get; set; }
+        //public DbSet<RespostaChat> RespostaChat { get; set; }
     }
     
 }

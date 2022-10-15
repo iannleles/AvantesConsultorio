@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace ChatBot_Web.Areas.Identity.Pages.Account
+namespace GCMAvantes.Areas.Identity.Pages.Account
 {
     public class AccessDeniedModel : PageModel
     {
