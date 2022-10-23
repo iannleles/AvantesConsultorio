@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
-namespace AulaUmTurmaH.Infra.Context
+namespace GCMAvantes.Infra.Context
 {
     public class GCMAvantesContext : DbContext
     {
