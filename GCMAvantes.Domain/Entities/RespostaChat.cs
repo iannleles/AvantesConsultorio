@@ -5,7 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace GCMAvantes.Models
+namespace GCMAvantes.Domain.Entities
 {
     [Table("RespostaChat")]
     public class RespostaChat

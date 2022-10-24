@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GCMAvantes.Domain.Entities
 {
-    public class User
+    public class User : EntityBase
     {
         public int Id { get; set; }
 

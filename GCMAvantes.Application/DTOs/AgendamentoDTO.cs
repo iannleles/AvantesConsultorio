@@ -1,16 +1,15 @@
-﻿using System;
+﻿using GCMAvantes.Domain.Entities;
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
 using System.Threading.Tasks;
 
-namespace GCMAvantes.Domain.Entities
+namespace GCMAvantes.Application.DTOs
 {
-    public class Agendamento : EntityBase
+    public class AgendamentoDTO
     {
-        public int Id { get; set; }
-
-        public int EspecialidadeId { get; set; }
-
+        public int AgendamentoId { get; set; }
         public Especialidade Especialidade { get; set; }
 
         public DateTime Data { get; set; }
@@ -19,7 +18,6 @@ namespace GCMAvantes.Domain.Entities
 
         public Paciente Paciente { get; set; }
 
-        public Endereco Endereco { get; set; }        
-
+        public Endereco Endereco { get; set; }
     }
 }

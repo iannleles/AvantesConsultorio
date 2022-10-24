@@ -7,9 +7,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Applications\" />
     <Folder Include="Interfaces\" />
     <Folder Include="Validations\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\GCMAvantes.Domain\GCMAvantes.Domain.csproj" />
+    <ProjectReference Include="..\GCMAvantes.Infra\GCMAvantes.Infra.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using GCMAvantes.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace GCMAvantes.Infra.Context
 {
@@ -9,7 +10,7 @@ namespace GCMAvantes.Infra.Context
 
         }
         
-        
+        public DbSet<Agendamento> Agendamentos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {           
