@@ -5,8 +5,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
-
-
+using GCMAvantes.Application.Interfaces;
+using GCMAvantes.Application.Applications;
+using GCMAvantes.Infra.Interfaces;
+using GCMAvantes.Infra.Repositories;
+using GCMAvantes.Infra.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -19,12 +22,12 @@ builder.Services.AddSwaggerGen();
 
 
 var connectionString = builder.Configuration.GetConnectionString("DefaultConnection");
-builder.Services.AddDbContext<ApplicationDBContext>(options => { options.UseSqlServer(connectionString); });
+builder.Services.AddDbContext<GCMAvantesContext>(options => { options.UseSqlServer(connectionString); });
+
+builder.Services.AddScoped<IAgendamentoApplication, AgendamentoApplication>();
+builder.Services.AddScoped<IAgendamentoRepository, AgendamentoRepository>();
 
 builder.Services.AddIdentityConfig(builder.Configuration);
-
-//builder.Services.AddScoped<IProfessorApplication, ProfessorApplication>();
-
 
 var app = builder.Build();
 

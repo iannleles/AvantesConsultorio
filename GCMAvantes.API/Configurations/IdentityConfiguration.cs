@@ -1,5 +1,6 @@
 ﻿using GCMAvantes.Data;
 using GCMAvantes.Helpers;
+using GCMAvantes.Infra.Context;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
@@ -13,12 +14,12 @@ namespace GCMAvantes.Configurations
         public static IServiceCollection AddIdentityConfig(this IServiceCollection services,
             IConfiguration configuration)
         {
-            services.AddDbContext<ApplicationDBContext>(options =>
+            services.AddDbContext<GCMAvantesContext>(options =>
                 options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
 
             services.AddIdentity<IdentityUser, IdentityRole>()
                .AddRoles<IdentityRole>()
-               .AddEntityFrameworkStores<ApplicationDBContext>()
+               .AddEntityFrameworkStores<GCMAvantesContext>()
                .AddErrorDescriber<IdentityPortugueseTranslation>()
                .AddDefaultTokenProviders();
 

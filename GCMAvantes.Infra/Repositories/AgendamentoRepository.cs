@@ -1,6 +1,7 @@
 ﻿using GCMAvantes.Domain.Entities;
 using GCMAvantes.Infra.Context;
 using GCMAvantes.Infra.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,7 +27,7 @@ namespace GCMAvantes.Infra.Repositories
 
         public List<Agendamento> GetAll()
         {
-            return _context.Agendamentos.ToList();
+            return _context.Agendamentos.Include(a => a.Paciente).Include(a => a.Especialidade).Include(a => a.Endereco).ToList();
         }
 
         public Agendamento GetById(int id)

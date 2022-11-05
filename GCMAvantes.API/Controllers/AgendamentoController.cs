@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace GCMAvantes.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     [ApiController]
     public class AgendamentoController : ControllerBase
@@ -28,25 +28,25 @@ namespace GCMAvantes.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert(MateriaDTO materiaDTO)
+        public IActionResult Insert(AgendamentoDTO agendamentoDTO)
         {
-            _materiaApplication.Insert(materiaDTO);
+            _agendamentoApplication.Insert(agendamentoDTO);
             return Ok();
         }
 
-        [HttpPut]
-        public IActionResult Update(MateriaDTO materiaDTO)
-        {
-            _materiaApplication.Update(materiaDTO);
-            return Ok();
-        }
+        //[HttpPut]
+        //public IActionResult Update(AgendamentoDTO materiaDTO)
+        //{
+        //    _agendamentoApplication.Update(materiaDTO);
+        //    return Ok();
+        //}
 
-        [HttpDelete]
-        public IActionResult Delete(int id)
-        {
-            _materiaApplication.Delete(id);
-            return Ok();
-        }
+        //[HttpDelete]
+        //public IActionResult Delete(int id)
+        //{
+        //    _agendamentoApplication.Delete(id);
+        //    return Ok();
+        //}
 
 
     }

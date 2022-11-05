@@ -15,18 +15,16 @@ namespace GCMAvantes.Application.Applications
 
         public List<AgendamentoDTO> GetAll()
         {
-            List<Agendamento> agendamentos = _agendamentoRepository.GetAll();
-            return agendamentos.Select(agendamentos => new AgendamentoDTO
+            var agendamentos = _agendamentoRepository.GetAll();
+            var resultado =  agendamentos.Select(agendamentos => new AgendamentoDTO
             {
-                Especialidade = new Especialidade
-                {
-                    Id = agendamentos.Especialidade.Id,
-                    Nome = agendamentos.Especialidade.Nome
-                },
+                EspecialidadeId = agendamentos.EspecialidadeId,
+                EspecialidadeNome = agendamentos.Especialidade.Nome,
                 Data = agendamentos.Data,
                 Horario = agendamentos.Horario,
-                Paciente = new Paciente
+                Paciente = new PacienteDTO
                 {
+                    Id = agendamentos.Paciente.Id,
                     Nome = agendamentos.Paciente.Nome,
                     Sobrenome = agendamentos.Paciente.Sobrenome,
                     RG = agendamentos.Paciente.RG,
@@ -35,8 +33,9 @@ namespace GCMAvantes.Application.Applications
                     Telefone = agendamentos.Paciente.Telefone,
                     Celular = agendamentos.Paciente.Celular,
                 },
-                Endereco = new Endereco
+                Endereco = new EnderecoDTO
                 {
+                    Id = agendamentos.Endereco.Id,
                     Cep = agendamentos.Endereco.Cep,
                     Logradouro = agendamentos.Endereco.Logradouro,
                     Numero = agendamentos.Endereco.Numero,
@@ -45,23 +44,20 @@ namespace GCMAvantes.Application.Applications
                     Cidade = agendamentos.Endereco.Cidade,
                     UFSiglaId = agendamentos.Endereco.UFSiglaId,
                 }
-            }).ToList();            
+            }).ToList();
+
+            return resultado;
         }
 
         public void Insert(AgendamentoDTO agendamentoDTO)
         {
 
-            var agendamento = new Agendamento
-            {
-
-                Especialidade = new Especialidade
-                {
-                    Id = agendamentoDTO.Especialidade.Id,
-                    Nome = agendamentoDTO.Especialidade.Nome
-                },                
-                Data = agendamentoDTO.Data,
-                Horario = agendamentoDTO.Horario,
-                Paciente = new Paciente
+            var agendamento = new Agendamento();
+            
+                agendamento.EspecialidadeId = agendamentoDTO.EspecialidadeId;
+                agendamento.Data = agendamentoDTO.Data;
+                agendamento.Horario = agendamentoDTO.Horario;
+                agendamento.Paciente = new Paciente()
                 {
                     Nome = agendamentoDTO.Paciente.Nome,
                     Sobrenome = agendamentoDTO.Paciente.Sobrenome,
@@ -70,8 +66,8 @@ namespace GCMAvantes.Application.Applications
                     DataNascimento = agendamentoDTO.Paciente.DataNascimento,
                     Telefone = agendamentoDTO.Paciente.Telefone,
                     Celular = agendamentoDTO.Paciente.Celular,
-                },
-                Endereco = new Endereco
+                };
+                agendamento.Endereco = new Endereco()
                 {
                     Cep = agendamentoDTO.Endereco.Cep,
                     Logradouro = agendamentoDTO.Endereco.Logradouro,
@@ -80,10 +76,8 @@ namespace GCMAvantes.Application.Applications
                     Bairro = agendamentoDTO.Endereco.Bairro,
                     Cidade = agendamentoDTO.Endereco.Cidade,
                     UFSiglaId = agendamentoDTO.Endereco.UFSiglaId,
-                }               
-            };
-           
-           
+                };
+
             agendamento.InserirDadosBase();
             _agendamentoRepository.Insert(agendamento);
         }
@@ -92,11 +86,7 @@ namespace GCMAvantes.Application.Applications
         {
             var agendamento = _agendamentoRepository.GetById(agendamentoDTO.AgendamentoId);
 
-            agendamento.Especialidade = new Especialidade
-            {
-                Id = agendamentoDTO.Especialidade.Id,
-                Nome = agendamentoDTO.Especialidade.Nome
-            };
+            agendamento.EspecialidadeId = agendamento.EspecialidadeId;
             agendamento.Data = agendamentoDTO.Data;
             agendamento.Horario = agendamentoDTO.Horario;
             agendamento.Paciente = new Paciente
