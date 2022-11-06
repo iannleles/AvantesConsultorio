@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <UserSecretsId>aspnet-GCMAvantes-DB0451BB-376B-4D55-B667-80FD8710E858</UserSecretsId>
     <RootNamespace>GCMAvantes</RootNamespace>
+    <ErrorOnDuplicatePublishOutputFiles>false</ErrorOnDuplicatePublishOutputFiles>
   </PropertyGroup>
 
   <ItemGroup>
