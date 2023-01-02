@@ -22,10 +22,6 @@ Desafiar a utilização de recursos além dos aprendidos durante as aulas.
 <li>Ajax</li>
 <li>Banco de dados SQL Server com EntityFramework</li>
 
-# Video demonstrativo do projeto:
-https://drive.google.com/file/d/1E5Xeav4Nr49zkqZzWaRyQGyTtB8COGJg/view
-
-
 
 # Fonte de pesquisa
 
