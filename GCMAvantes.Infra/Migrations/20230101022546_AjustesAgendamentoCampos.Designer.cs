@@ -4,6 +4,7 @@ using GCMAvantes.Infra.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace GCMAvantes.Infra.Migrations
 {
     [DbContext(typeof(GCMAvantesContext))]
-    partial class GCMAvantesContextModelSnapshot : ModelSnapshot
+    [Migration("20230101022546_AjustesAgendamentoCampos")]
+    partial class AjustesAgendamentoCampos
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -5,10 +5,8 @@ using System.Threading.Tasks;
 
 namespace GCMAvantes.Domain.Entities
 {
-    public class Endereco
-    {
-        public int Id { get; set; }
-
+    public class Endereco : EntityBase
+    {  
         public string Cep { get; set; }
 
         public string Logradouro { get; set; }
