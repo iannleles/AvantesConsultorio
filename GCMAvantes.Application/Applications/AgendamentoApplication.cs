@@ -37,7 +37,7 @@ namespace GCMAvantes.Application.Applications
         public void Insert(AgendamentoDTO agendamentoDTO)
         {
             Agendamento agendamento = new Agendamento();            
-            agendamento.Especialidade.Id = agendamentoDTO.EspecialidadeId;
+            agendamento.EspecialidadeId = agendamentoDTO.EspecialidadeId;
             agendamento.Data = agendamentoDTO.Data;
             agendamento.Horario = agendamentoDTO.Horario;
             agendamento.Paciente = new Paciente
