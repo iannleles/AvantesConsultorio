@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 namespace GCMAvantes.Domain.Entities
 {
     public class Agendamento : EntityBase
-    {
-        public int Id { get; set; }
-
-        public int EspecialidadeId { get; set; }
-
+    {    
+        public virtual int EspecialidadeId { get; set; }
         public Especialidade Especialidade { get; set; }
-
         public DateTime Data { get; set; }
 
-        public DateTime Horario { get; set; }
-
+        public DateTime Horario { get; set; }        
         public Paciente Paciente { get; set; }
-
         public Endereco Endereco { get; set; }        
 
     }

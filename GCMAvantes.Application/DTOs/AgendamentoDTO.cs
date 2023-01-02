@@ -11,15 +11,22 @@ namespace GCMAvantes.Application.DTOs
     {
         public int AgendamentoId { get; set; }
         public int EspecialidadeId { get; set; }
-
         public string EspecialidadeNome { get; set; }
 
+        public string PacienteNome { get; set; }
+
+        public int PacienteId { get; set; }
+
+        public Paciente Paciente {get; set; }
         public DateTime Data { get; set; }
 
-        public DateTime Horario { get; set; }
+        public DateTime Horario { get; set; }        
 
-        public PacienteDTO Paciente { get; set; }
+        public int EnderecoId { get; set; }
+        public Endereco Endereco { get; set; }     
+        
+         public DateTime CriadoEm { get; set; }
 
-        public EnderecoDTO Endereco { get; set; }
+        public bool Excluido { get; set; }
     }
 }
